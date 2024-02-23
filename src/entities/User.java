@@ -1,10 +1,23 @@
 package entities;
+import java.util.UUID;
 
 public class User {
+    private String id;
+
     private String email;
     private String name;
     private Number age;
     private String addres;
+
+    public void setId(){
+        if(this.id == null){
+            this.id = UUID.randomUUID().toString();
+        }
+    }
+
+    public String getId(){
+        return id;
+    }
 
     public void setEmail(String email){
         this.email = email;

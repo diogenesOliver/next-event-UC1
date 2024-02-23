@@ -7,35 +7,31 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("================== New User ==================");
-        
-        System.out.print("Email:");
+
+        System.out.print("Email: ");
         String email = scanner.nextLine();
-
-        System.out.print("Name:");
-        String name = scanner.nextLine();
-
-        User u = new User();
         
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+        
+        System.out.print("Addres: ");
+        String addres = scanner.nextLine();
+        
+        System.out.print("Age: ");
+        Number age = scanner.nextInt();
+        
+        User u = new User();
+
+        u.setId();
         u.setEmail(email);
         u.setName(name);
+        u.setAge(age);
+        u.setAddres(addres);
         
-
-        System.out.println("================== New User 2 ==================");
-        
-        System.out.print("Email:");
-        email = scanner.nextLine();
-
-        System.out.print("Name:");
-        name = scanner.nextLine();
-        
-        User u2 = new User();
-        u2.setEmail(email);
-        u2.setName(name);
-
-        System.out.println("O email cadastrado foi: " + u.getEmail());
-        System.out.println("O nome cadastrado foi: " + u.getName());
-
-        System.out.println("O email cadastrado para u2 foi: " + u2.getEmail());
-        System.out.println("O nome cadastrado para u2 foi: " + u2.getName());
+        System.out.println("UserID: " + u.getId());
+        System.out.println("Email: " + u.getEmail());
+        System.out.println("Name: " + u.getName());
+        System.out.println("Age: " + u.getAge());
+        System.out.println("Address: " + u.getAddres());
     }
 }
