@@ -11,7 +11,7 @@ public class CreateUserController {
         ArrayList<User> users = new ArrayList<User>();
 
         System.out.println("========= Create User =========");
-    
+
         System.out.print("Email: ");
         String email = scanner.nextLine();
 
@@ -33,5 +33,9 @@ public class CreateUserController {
         u.setAddres(addres);
 
         users.add(u);
+
+        for (User user : users) {
+            System.out.println("Olá " + user.getName() + " Seja bem ao sistema!");
+        }
     }
 }
