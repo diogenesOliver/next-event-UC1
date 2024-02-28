@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         CreateUserController creatUserControler = new CreateUserController();
-        
+        CreateEventController createEventController = new CreateEventController();
 
         Scanner menu = new Scanner(System.in);
 
@@ -35,7 +35,7 @@ public class App {
                     break;
 
                 case 2:
-                    System.out.print("\nOpção Clientes Selecionado\n");
+                    createEventController.createEvent();
                     break;
 
                 case 3:
