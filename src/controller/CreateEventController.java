@@ -15,19 +15,19 @@ public class CreateEventController {
 
         System.out.println("========= Create Event =========");
 
-        System.out.println("Name: ");
+        System.out.print("Name: ");
         String name = scanner.nextLine();
 
-        System.out.println("Addres: ");
+        System.out.print("Addres: ");
         String addres = scanner.nextLine();
 
-        System.out.println("Category: ");
+        System.out.print("Category: ");
         String category = scanner.nextLine();
 
-        System.out.println("Description: ");
+        System.out.print("Description: ");
         String description = scanner.nextLine();
 
-        System.out.println("Hour: ");
+        System.out.print("Hour: ");
         String hour = scanner.nextLine();
 
         Events e = new Events();
