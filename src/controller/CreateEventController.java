@@ -1,5 +1,7 @@
 package controller;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -9,6 +11,18 @@ import java.util.Scanner;
 import entities.Events;
 
 public class CreateEventController {
+    
+    static void writeOnFile(Object content){
+        String filePath = "events.txt";
+        
+        try{
+            FileWriter writter = new FileWriter(filePath);
+            writter.write(content.toString());
+        }catch(IOException e){
+            System.out.println("ERROR: " + e);
+        }
+    }
+
     public static void createEvent() {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Events> events = new ArrayList<Events>();
@@ -49,6 +63,6 @@ public class CreateEventController {
 
         events.add(e);
 
-        System.out.println(e);
+        writeOnFile("Evento criado");
     }
 }
