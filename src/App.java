@@ -1,13 +1,15 @@
 import controller.CreateUserController;
 import controller.CreateEventController;
+import controller.GetEventsController;
 
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
+
         CreateUserController creatUserControler = new CreateUserController();
         CreateEventController createEventController = new CreateEventController();
+        GetEventsController getEventsController = new GetEventsController();
 
         Scanner menu = new Scanner(System.in);
 
@@ -39,7 +41,7 @@ public class App {
                     break;
 
                 case 3:
-                    System.out.print("\nOpção Produtos Selecionado\n");
+                    getEventsController.getEvents();
                     break;
 
                 default:
